@@ -1,0 +1,62 @@
+---
+driver:
+  name: vagrant
+
+provisioner:
+  name: chef_solo
+
+platforms:
+- name: ubuntu-12.04
+- name: ubuntu-10.04
+- name: ubuntu-13.10
+- name: centos-6.4
+- name: centos-5.10
+- name: debian-6
+- name: debian-7
+
+suites:
+- name: ruby-210
+  run_list:
+  - recipe[kitchen-rubies]
+  attributes:
+    kitchen-rubies:
+      project: ruby-210
+      access_key_id: <%= ENV['AWS_ACCESS_KEY_ID'] %>
+      secret_access_key: <%= ENV['AWS_SECRET_ACCESS_KEY'] %>
+      bucket: kitchen-rubies
+- name: ruby-200-gems-21
+  run_list:
+  - recipe[kitchen-rubies]
+  attributes:
+    kitchen-rubies:
+      project: ruby-200-gems-21
+      access_key_id: <%= ENV['AWS_ACCESS_KEY_ID'] %>
+      secret_access_key: <%= ENV['AWS_SECRET_ACCESS_KEY'] %>
+      bucket: kitchen-rubies
+- name: ruby-200-gems-20
+  run_list:
+  - recipe[kitchen-rubies]
+  attributes:
+    kitchen-rubies:
+      project: ruby-200-gems-20
+      access_key_id: <%= ENV['AWS_ACCESS_KEY_ID'] %>
+      secret_access_key: <%= ENV['AWS_SECRET_ACCESS_KEY'] %>
+      bucket: kitchen-rubies
+- name: ruby-193-gems-20
+  run_list:
+  - recipe[kitchen-rubies]
+  attributes:
+    kitchen-rubies:
+      project: ruby-193-gems-20
+      access_key_id: <%= ENV['AWS_ACCESS_KEY_ID'] %>
+      secret_access_key: <%= ENV['AWS_SECRET_ACCESS_KEY'] %>
+      bucket: kitchen-rubies
+- name: ruby-193-gems-18
+  run_list:
+  - recipe[kitchen-rubies]
+  attributes:
+    kitchen-rubies:
+      project: ruby-193-gems-18
+      access_key_id: <%= ENV['AWS_ACCESS_KEY_ID'] %>
+      secret_access_key: <%= ENV['AWS_SECRET_ACCESS_KEY'] %>
+      bucket: kitchen-rubies
