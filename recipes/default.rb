@@ -29,7 +29,7 @@ directory node['kitchen-rubies']['dir'] do
 end
 
 git node['kitchen-rubies']['dir'] do
-  repository 'https://github.com/danielsdeleo/omnibus-rubies.git'
+  repository 'https://github.com/coderanger/omnibus-rubies.git'
   revision 'master'
   user node['omnibus']['build_user']
 end
