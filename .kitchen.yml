@@ -26,6 +26,15 @@ suites:
       access_key_id: <%= ENV['AWS_ACCESS_KEY_ID'] %>
       secret_access_key: <%= ENV['AWS_SECRET_ACCESS_KEY'] %>
       bucket: kitchen-rubies
+- name: ruby-200
+  run_list:
+  - recipe[kitchen-rubies]
+  attributes:
+    kitchen-rubies:
+      project: ruby-200
+      access_key_id: <%= ENV['AWS_ACCESS_KEY_ID'] %>
+      secret_access_key: <%= ENV['AWS_SECRET_ACCESS_KEY'] %>
+      bucket: kitchen-rubies
 - name: ruby-200-gems-21
   run_list:
   - recipe[kitchen-rubies]
@@ -41,6 +50,15 @@ suites:
   attributes:
     kitchen-rubies:
       project: ruby-200-gems-20
+      access_key_id: <%= ENV['AWS_ACCESS_KEY_ID'] %>
+      secret_access_key: <%= ENV['AWS_SECRET_ACCESS_KEY'] %>
+      bucket: kitchen-rubies
+- name: ruby-193
+  run_list:
+  - recipe[kitchen-rubies]
+  attributes:
+    kitchen-rubies:
+      project: ruby-193
       access_key_id: <%= ENV['AWS_ACCESS_KEY_ID'] %>
       secret_access_key: <%= ENV['AWS_SECRET_ACCESS_KEY'] %>
       bucket: kitchen-rubies
