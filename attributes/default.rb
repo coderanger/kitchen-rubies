@@ -17,3 +17,4 @@
 #
 
 default['kitchen-rubies']['dir'] = '/srv/ruby'
+override['omnibus']['build_user'] = 'root'
