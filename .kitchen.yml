@@ -13,6 +13,8 @@ platforms:
 - name: centos-5.10
 - name: debian-6
 - name: debian-7
+- name: fedora-19
+- name: fedora-20
 
 suites:
 - name: ruby-210
